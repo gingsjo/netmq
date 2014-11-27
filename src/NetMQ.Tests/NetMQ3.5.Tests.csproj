@@ -36,10 +36,6 @@
     <StartupObject>NetMQ.Tests.NetMQTestRunner</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AsyncIO, Version=0.1.15.0, Culture=neutral, PublicKeyToken=44a94435bd6f33f8, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\AsyncIO.0.1.15.0\lib\net35\AsyncIO.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -84,6 +80,10 @@
     <Compile Include="zmq\YQueueTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\AsyncIO\Source\AsyncIO\AsyncIO3.5.csproj">
+      <Project>{47613611-3C38-47D9-B934-7D7F93D6B8A4}</Project>
+      <Name>AsyncIO3.5</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NetMQ\NetMQ3.5.csproj">
       <Project>{fa712b74-d68a-4053-bb0f-a3ed1fbeabc1}</Project>
       <Name>NetMQ3.5</Name>

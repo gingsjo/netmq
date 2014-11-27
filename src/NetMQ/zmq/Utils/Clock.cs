@@ -35,12 +35,13 @@ namespace NetMQ.zmq.Utils
 
         private static bool s_rdtscSupported = false;
 
+        public static bool RdtscSupported() { return s_rdtscSupported; }
+
         static Clock()
         {
             try
             {
-                if (Environment.OSVersion.Platform == PlatformID.Win32NT || Environment.OSVersion.Platform == PlatformID.Unix ||
-                    Environment.OSVersion.Platform == (PlatformID)128)
+                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
                 {
                     Opcode.Open();
                     s_rdtscSupported = true;
